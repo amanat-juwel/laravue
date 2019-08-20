@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/apps', 'HomeController@index')->name('home');
 
 //vue js routing
 //this emits popper.js error
