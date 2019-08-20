@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e8d01e5565fc26920acbe40dc8c8328",
+    "content-hash": "389cd78cfc6fea276f031d267a02af17",
     "packages": [
+        {
+            "name": "amanatjuwel/db-dump",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amanat-juwel/db-dump.git",
+                "reference": "56bcb8102a624cf0b0f49db832da235494590c3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/amanat-juwel/db-dump/zipball/56bcb8102a624cf0b0f49db832da235494590c3a",
+                "reference": "56bcb8102a624cf0b0f49db832da235494590c3a",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Amanatjuwel\\DbDump\\DbDumpServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Amanatjuwel\\DbDump\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amanat Juwel",
+                    "email": "amanatjuwel@gmail.com"
+                }
+            ],
+            "description": "Dump the contents of a database",
+            "time": "2019-08-19T06:42:43+00:00"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.2.1",
@@ -5634,7 +5674,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "amanatjuwel/db-dump": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

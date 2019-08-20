@@ -59,8 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <img src="./public/backend/images/profile.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}
-          <p>{{Auth::user()->type}}</p>
+         
         </div>
       </div>
 
@@ -80,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           @can('isAdmin')
           <li class="nav-item">
               <router-link to="/users" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
               </p>
@@ -96,6 +95,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </router-link>
           </li> 
           
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="{{ url('database-backup') }}">
+                <i class="nav-icon fa fa-hdd"></i>
+                <p>Db Backup</p>
+            </a>
+          </li> 
 
           <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}"
@@ -121,6 +126,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
+        
+        @yield('content')
+
         <!-- for example router view -->
         <router-view></router-view>
         <!-- set progressbar -->
